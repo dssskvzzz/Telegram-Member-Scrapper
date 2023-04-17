@@ -1,14 +1,15 @@
 from telethon import TelegramClient, sync
 import openpyxl
 
-api_id = YOUR_API_ID
-api_hash = 'YOUR_API_HASH'
-phone = 'YOUR_PHONE_NUMBER'
+api_id = api
+api_hash = 'api_hash'
+phone = 'phone'
+chat_id = chat_id
+
 
 client = TelegramClient('session_name', api_id, api_hash)
 client.start(phone)
 
-chat_id = YOUR_CHAT_ID
 members = client.get_participants(chat_id)
 
 wb = openpyxl.Workbook()
